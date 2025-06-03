@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .el1{
+            display: none;
+        }
+        .el2{
+            display: block;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<img id="im1" src="https://www.ionos.at/digitalguide/fileadmin/DigitalGuide/Teaser/html-tagst.jpg" alt="123">
+
+<div>
+Alderona and Kludo are siblings with special secret powers that are meant to protect humanity.
+</div>
+<br><br><br><br><br>
+<!-- <button onclick="fun()">click me</button> -->
+  <div class="container">parent container</div>
+   <button onclick="hi()">hide</button>
+   <button onclick="sh()">show</button>
+   <button onclick="hs()">show/hide</button>
+    <script>
+
+        let im1= document.getElementById("im1")      // it is not neccecary when append was taken id//
+        var im =document.createElement("img");
+        im.appendChild(im1)
+        im.src="https://th.bing.com/th/id/OIP.Oag0dh4MINdG_qxOzJMoiwHaIB?rs=1&pid=ImgDetMain"
+    
+    document.body.append(im);
+         
+    let para=["Alderona and Kludo are siblings with special secret powers that are meant to protect humanity.","Mr. Chesterfield comes back from his ship voyage to find that his wife is possessed by something evil."]
+     count=0; 
+    
+     var  btn=document.createElement("button")   //--------------method 1
+        btn.innerText="click me"
+         btn.addEventListener("click",function(){
+         if(count==para.length){
+            count=0
+         }
+         var div=document.querySelector("div")
+         div.innerText=para[count]
+         count++
+         }
+        )
+       document.body.append(btn)
+
+      
+         
+        // function fun(){          ----------------method 2
+        //  if(count==para.length){
+        //     count=0
+        //  }
+        //  var div=document.querySelector("div")
+        //  div.innerText=para[count]
+        //  count++
+        //  }
+
+       
+
+   
+    var container=document.querySelector(".container")
+
+    function hi(){
+    container.classList.add("hide")
+    }
+    function sh(){
+    container.classList.remove("hide")
+    }
+    function hs(){
+        container.classList.toggle("hide")
+    }
+    </script>
+
+
+</body>
+</html>

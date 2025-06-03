@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template1</title>
+    <style>
+        .el{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aliceblue;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .el1{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+        }
+        .el1>img{
+            width: 100%;
+            margin: 30px;
+        }
+        .s2{
+               display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        
+    </style>
+
+</head>
+<body>
+   
+    <script>
+
+       var nav=document.createElement("div")
+       nav.className="el"
+       var left=document.createElement("h1")
+       var right=document.createElement("p")
+
+       left.innerText="BR Architects"
+       right.innerHTML=" <ul> <li>project</li> <li>about</li>  <li>contact</li> </ul>"
+
+        nav.append(left,right)
+       document.body.append(nav)
+
+       var im=document.createElement("img")
+       im.setAttribute("src","https://www.w3schools.com/w3images/architect.jpg")
+
+       document.body.append(im)
+
+       var line1=document.createElement("h1")
+       line1.innerText="PROJECT"
+       document.body.append(line1)
+
+       var container=document.createElement("div")
+          container.className="el1"
+        
+        head=["Summer House","Brick House","Renovated","Barn House","Summer House","Brick House","Renovated","Barn House"]
+        for(i=0;i<=8;i++){
+        var im1=document.createElement("img")
+        im1.setAttribute("src","https://www.w3schools.com/w3images/house5.jpg")
+        var im2=document.createElement("img")
+        im2.setAttribute("src","https://www.w3schools.com/w3images/house2.jpg")
+        var im3=document.createElement("img")
+        im3.setAttribute("src","https://www.w3schools.com/w3images/house3.jpg")
+        var im4=document.createElement("img")
+        im4.setAttribute("src","https://www.w3schools.com/w3images/house4.jpg")
+        var im5=document.createElement("img")
+        im5.setAttribute("src","https://www.w3schools.com/w3images/house2.jpg")
+        var im6=document.createElement("img")
+        im6.setAttribute("src","https://www.w3schools.com/w3images/house5.jpg")
+        var im7=document.createElement("img")
+        im7.setAttribute("src","https://www.w3schools.com/w3images/house5.jpg")
+        var im8=document.createElement("img")
+        im8.setAttribute("src","https://www.w3schools.com/w3images/house3.jpg")
+
+        var head1=document.createElement("h1")
+        head1.innerText="head[i]"                /* adding data by about data as i*/
+
+        // var head1=document.createElement("h1")
+        // head1.innerText="Summer House"
+        // var head2=document.createElement("h1") 
+        // head2.innerText="Brick House"    
+        // var head3=document.createElement("h1") 
+        // head3.innerText="Renovated"    
+        // var head4=document.createElement("h1")
+        // head4.innerText="Barn House"    
+        // var head1=document.createElement("h1")
+        // head1.innerText="Summer House"
+        // var head2=document.createElement("h1") 
+        // head2.innerText="Brick House"    
+        // var head3=document.createElement("h1") 
+        // head3.innerText="Renovated"    
+        // var head4=document.createElement("h1")
+        // head4.innerText="Barn House"    
+
+        var child1=document.createElement("div")
+        var child2=document.createElement("div")
+        var child3=document.createElement("div")
+        var child4=document.createElement("div")
+        var child5=document.createElement("div")
+        var child6=document.createElement("div")
+        var child7=document.createElement("div")
+        var child8=document.createElement("div")
+        }
+        child1.append(im1,head[0])
+        child2.append(im2,head[1])
+        child3.append(im3,head[3])
+        child4.append(im4,head[4])
+        child5.append(im5,head[5])
+        child6.append(im6,head[6])
+        child7.append(im7,head[7])
+        child8.append(im8,head[8]) 
+
+         container.append(child1,child2,child3,child4,child5,child6,child7,child8)
+
+        document.body.append(container)
+
+        var line2=document.createElement("h1")
+        line2.innerText="About"
+        document.body.append(line2)
+
+        var line3=document.createElement("p")
+        line3.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        document.body.append(line3)
+
+        let container2=document.createElement("div")
+        // container2.className="s2"
+        let im9=document.createElement("img")
+        im9.setAttribute("src","https://www.w3schools.com/w3images/team2.jpg")
+        let header1=document.createElement("h1")
+        header1.innerHTML="<h1>John Doe</h1><h1>CEO & Founder</h1><p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</p>"
+        let im10=document.createElement("img")
+        im10.setAttribute("src","https://www.w3schools.com/w3images/team1.jpg")
+        let header2=document.createElement("h1")
+        header2.innerHTML="<h1>John Doe</h1><h1>Architect</h1><p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</p>"
+        let im11=document.createElement("img")
+        im11.setAttribute("src","https://www.w3schools.com/w3images/team3.jpg")
+        let header3=document.createElement("h1")
+        header3.innerHTML="<h1>John Doe</h1><h1>Architect</h1><p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</p>"
+        let im12=document.createElement("img")
+        im12.setAttribute("src","https://www.w3schools.com/w3images/team4.jpg")
+        let header4=document.createElement("h1")
+        header4.innerHTML="<h1>John Doe</h1><h1>Architect</h1><p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum</p>"
+         
+        var child9=document.createElement("div")
+        var child10=document.createElement("div")
+        var child11=document.createElement("div")
+        var child12=document.createElement("div")
+        
+        child9.append(im9,header1)
+        child10.append(im10,header2)
+        child11.append(im11,header3)
+        child12.append(im12,header4)
+
+         container2.append(child9,child10,child11,child12,)
+         container2.classList.add("s2")
+
+        document.body.append(container2)
+
+         var im14=document.createElement("img")
+         im14.setAttribute("src","https://www.w3schools.com/w3images/map.jpg")
+
+         document.body.append(im14)
+        
+        
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

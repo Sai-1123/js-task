@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          let movies=["Robinhood","Extra Ordinary Man",
+          "Macherla Niyojakavargam","Maestro","Rang De","Bheeshma","Chal Mohan Ranga",];
+          
+          for(let i=0; i<movies.length; i++){
+            console.log(movies[i])
+          };
+           for(let movie in movies){
+            console.log(movies[movie])
+           }
+             for(let movie of movies){
+            console.log(movie)
+           }
+
+ //task2//
+        let arr= ["html","css","java","js"]
+        arr.shift()
+        arr.pop()
+        console.log(arr)
+//task3//
+        let reversedArr=[];
+        for(let i=movies.length-1;i>=0; i--){
+            reversedArr.push(movies[i]) 
+        }
+        for(let i=reversedArr.length-1;i>=0; i--){    
+            console.log(reversedArr[i]); 
+        }
+let arr3 = [12, 3, 5, 6, 22, 56, 29]
+arr3.reverse();
+console.log(arr3);
+
+
+//task-4//
+        let arr1=[12, 3, 5, 6, 22, 56, 29]
+        let evenSum=0;
+        for(let i=0; i<arr1.length; i++){
+            if(arr1[i] %2 === 0){
+                  evenSum+=arr1[i]
+            }
+        }
+ console.log("Sum of even numbers:", evenSum);
+
+// let arr1 = [12, 3, 5, 6, 22, 56, 29];
+
+// let evenSum = arr1
+//   .filter(num => num % 2 === 0)   // keep only even numbers
+//   .reduce((sum, num) => sum + num, 0); // sum them up
+
+// console.log("Sum of even numbers:", evenSum);
+
+// const mixedArray = [[1, 2, 3,"java","python"],42,64,5,10, { name: "Alex" }, true   ];
+// let Array=[]
+// let str=[]
+// let obj=[]
+// let bool=[]
+// Array.push(mixedArray[0])
+// str.push(mixedArray.slice(1,5))
+// console.log(Array);
+// console.log(str);
+// console.log(obj);
+// console.log(bool);
+//method 2
+const mixedArray = [[1, 2, 3,"java","python"],42,64,5,10, { name: "Alex" }, true   ];
+let array=[];let str=[];let obj=[];let bool=[]
+for(let item of mixedArray){
+    if(Array.isArray(item))array.push(item);
+    else if (typeof item==="number") str.push(item);
+    else if (typeof item==="object") obj.push(item);
+    else if (typeof item==="boolean") bool.push(item);
+}
+ console.log(array.slice(0,Infinity));
+ console.log(str);
+ console.log(obj);
+ console.log(bool);
+//task 6
+ let sports=["Barrelrace","Horseball","Rockfishing" ,"Triplejump","Four-ball"]
+ let players=["Genghis Khan","Jumong","Lu Bu","Minamoto no Tametomo","Nasu no Yoichi","Robin Hood"]
+let sportsplayers=[]
+sportsplayers= sports.concat(players)
+ console.log(sportsplayers);
+ //task 7
+ let num=["1","2","3","4","5","6","7","8","9","10"]
+ num.splice(3,3,"40","50","60")
+ console.log(num);
+ //task 8
+ let weakends=["mondaay","tuesday","wenesday","thusday","friday","saterday","sunday"]
+ weakends.splice(5,2)
+ console.log(weakends);
+ //task 9
+ let weak=[]
+ weak= weakends.join("-")
+console.log(weak);
+//task 10
+let random=["2","35","56","25","29","84","69","94","68"]
+random.sort()
+console.log(random);
+
+
+    </script>
+</body>
+</html>

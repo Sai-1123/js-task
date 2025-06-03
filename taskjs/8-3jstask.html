@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal,password</title>
+    <style>
+        span{
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+
+
+    <form action="">
+    <input type="number" name="in1" id="inp1">
+    <input type="number" name="in2" id="inp2">
+    <label for=""> = </label>
+    <input type="number" name="in3" id="inp3"><br><br>
+    <button> + </button>    
+    <button> - </button>    
+    <button> * </button>    
+    <button> / </button>    
+</form>
+<br><br><br><br>
+<form action="">
+        <input type="text" name="name" placeholder="enter ru password">
+        
+        <input type="text" name="name" placeholder="reenter u r password">
+        <button id="btn9">click</button>
+        <span id="matched">password is matched</span>
+        
+    </form><br><br><br><br>
+<form action="">
+        <input type="text" name="name" placeholder="enter ru password">
+        
+        <!-- <input type="text" name="name" placeholder="reenter u r password"> -->
+        <button id="btn6">click</button>
+        <span id="strong">password is strong</span>
+        <span id="medium">password is medium</span>
+        <span id="weak">password is weak</span>
+        
+    </form>
+
+<script>
+    var inp1 = document.getElementById("inp1");
+    var inp2 = document.getElementById("inp2");
+    var inp3 = document.getElementById("inp3");
+    var btn1 = document.getElementsByTagName("button")[0];
+    var btn2 = document.getElementsByTagName("button")[1];
+    var btn3 = document.getElementsByTagName("button")[2];
+    var btn4 = document.getElementsByTagName("button")[3];
+
+    btn1.addEventListener("click", function (e) {
+        e.preventDefault(); //---------- prevent form from refreshing the page
+        let a = Number(inp1.value) + Number(inp2.value); //----- convert string to number
+        inp3.value = a; //------- set the result in the given input(element)
+        console.log(a);
+    });
+    btn2.addEventListener("click", function (f) {
+        f.preventDefault(); 
+        let a = Number(inp1.value) - Number(inp2.value); 
+        inp3.value = a; 
+        console.log(a);
+    });
+    btn3.addEventListener("click", function (g) {
+        g.preventDefault(); 
+        let a = Number(inp1.value) * Number(inp2.value); 
+        inp3.value = a; 
+        console.log(a);
+    });
+    btn4.addEventListener("click", function (h) {
+        h.preventDefault(); 
+        let a = Number(inp1.value) / Number(inp2.value); 
+        inp3.value = a; 
+        console.log(a);
+    });
+
+       var form=document.forms[1]
+        form.addEventListener("submit",function(event){
+            if(event.target[0].value==event.target[1].value){
+                event.preventDefault()
+                var sp1=document.getElementById("matched")
+                sp1.style.display="block"
+                sp1.style.color="green"
+                event.target[0].value=""
+                event.target[1].value=""
+                }
+            })
+       var form=document.forms[2]
+        form.addEventListener("submit",function(event){
+            if(event.target[0].value.length > 7){
+                event.preventDefault()
+                var sp2=document.getElementById("strong")
+                sp2.style.display="block"
+                sp2.style.color="green"
+                var sp4=document.getElementById("weak")
+                sp4.style.display="none"
+                var sp3=document.getElementById("medium")
+                sp3.style.display="none"
+                event.target[0].value=""
+                }
+                else if(event.target[0].value.length <= 4){
+                     event.preventDefault()
+                var sp4=document.getElementById("weak")
+                sp4.style.display="block"
+                sp4.style.color="red"
+                var sp3=document.getElementById("medium")
+                sp3.style.display="none"
+                 var sp2=document.getElementById("strong")
+                sp2.style.display="none"
+                event.target[0].value=""
+                }
+                else{
+                    event.preventDefault()
+                var sp3=document.getElementById("medium")
+                sp3.style.display="block"
+                sp3.style.color="aqua"
+                var sp2=document.getElementById("strong")
+                sp2.style.display="none"
+                var sp4=document.getElementById("weak")
+                sp4.style.display="none"
+                event.target[0].value=""
+                }
+            })
+      //-------method 2(add it alternative to else code)
+    //    var form=document.forms[2]          //----------taking more then two submits not work it overlaps
+    //     form.addEventListener("submit",function(event){
+    //         if(event.target[0].value.length <= 7 && event.target[0].value.length >= 5){
+    //             event.preventDefault()
+    //             var sp3=document.getElementById("medium")
+    //             sp3.style.display="block"
+    //             sp3.style.color="yellow"
+    //             var sp2=document.getElementById("strong")
+    //             sp2.style.display="none"
+    //             var sp4=document.getElementById("weak")
+    //             sp4.style.display="none"
+    //             event.target[0].value=""
+    //             }
+    //         })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-3TASK</title>
+</head>
+<body>
+    <script>
+//         let up=prompt("enter the name");
+//         console.log(up.toUpperCase());
+
+//         let low=prompt("enter the name 2");
+//         console.log(low.toLowerCase());
+
+//         let org=prompt("enter name3")
+//        let  rev=org.split("").reverse().join("")
+//     //    let upper=rev.toUpperCase()
+//         // console.log(upper);
+//         console.log(rev);
+
+//         let vol=prompt("enter name4")
+//         // console.log(vol.match(/a/ig));   // it give null if it is not found
+//         // console.log(vol.match(/e/ig));
+//         // console.log(vol.match(/i/ig));
+//         // console.log(vol.match(/o/ig));
+//         // console.log(vol.match(/u/ig));
+        
+
+// let a = vol.match(/a/ig);            // it not give null when we use if()
+// if (a) console.log("a:", a.length);
+
+// let e = vol.match(/e/ig);
+// if (e) console.log("e:", e.length);
+
+// let i = vol.match(/i/ig);
+// if (i) console.log("i:", i.length);
+
+// let o = vol.match(/o/ig);
+// if (o) console.log("o:", o.length);
+
+// let u = vol.match(/u/ig);
+// if (u) console.log("u:", u.length);
+
+
+// let username = prompt("username")
+
+//    if(username.length>5 && username.length<15){
+//     let h1=document.createElement("h3")
+//     h1.innerText="it is valid"
+//     document.body.append(h1)
+//    }
+//    else{
+//     let h2=document.createElement("h3")
+//     h2.innerText="it is not valid"
+//     document.body.append(h2)
+//    }
+
+// let firstname = prompt("firstname")
+// let middle="."
+// let lastname = prompt("lastname")
+// let gmail="@gmail.com"
+
+// // let fullname=firstname.toLowerCase() + middle.toLowerCase()+ lastname.toLowerCase()+gmail.toLowerCase()
+// let fullname="".concat(firstname.toLowerCase()+middle+lastname.toLowerCase()+gmail)
+// document.body.append(fullname)
+
+// let sentence=prompt("enter sentence")
+// console.log(sentence.split("").length);
+
+let front=prompt("front name")
+ let back=front.split("").reverse().join("")
+let pala=document.createElement("h2")
+pala.innerHTML=""            // with out innerHTML it will not work in funtions and events etc
+if(front===back){
+    pala.innerText="it is palandrome"   //we can give diretly string there if we want
+     pala.style.color="green"
+}else{
+        pala.innerText="it is not palandrome"
+     pala.style.color="red"
+         
+    }
+document.body.append(pala)   //if string is in if codition the "dom" not work on outside
+    </script>
+</body>
+</html>
